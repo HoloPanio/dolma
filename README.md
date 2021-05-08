@@ -7,7 +7,7 @@ This is a token transcoder that is used to encode and decode DogeHouse chat mess
 ## How to install
 To install this, simply go to your project and run the following command:
 ```cmd
-npm install kefler@lates --save
+npm install kefler@latest --save
 ```
 
 ## How to use
