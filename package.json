@@ -1,5 +1,5 @@
 {
-  "name": "kefler",
+  "name": "dolma",
   "description": "A token encoder and decoder for DogeHouse and associated projects",
   "version": "1.1.0",
   "main": "src/index",
@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HoloPanio/kefler.git"
+    "url": "git+https://github.com/HoloPanio/dolma.git"
   },
   "keywords": [
-    "kefler",
+    "dolma",
     "dogehouse",
     "doghouse.js",
     "doghouse-tokens",
@@ -21,7 +21,7 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HoloPanio/kefler/issues"
+    "url": "https://github.com/HoloPanio/dolma/issues"
   },
   "homepage": "https://github.com/HoloPanio/kefler#readme",
   "dependencies": {

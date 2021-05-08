@@ -9,12 +9,12 @@ interface RootMethodResponse {
 
 export * from './util/types/token';
 
-export function kefler(values?: Array<Unitoken | MessageToken | string> | string): RootMethodResponse {
+export function dolma(values?: Array<Unitoken | MessageToken | string> | string): RootMethodResponse {
 	return {
 		encoded: encodeTokens(values ?? ""),
 		decoded: decodeTokens(values ?? "")
 	}
 }
 
-kefler['encode'] = encodeTokens;
-kefler['decode'] = decodeTokens
+dolma['encode'] = encodeTokens;
+dolma['decode'] = decodeTokens

@@ -1,13 +1,13 @@
 <h1 align=center>
-Kefler Token Transcoder<br>
-<a href="https://www.npmjs.com/package/kefler"><img src="https://img.shields.io/npm/v/kefler?style=for-the-badge"></a>
+Dolma Token Transcoder<br>
+<a href="https://www.npmjs.com/package/dolma"><img src="https://img.shields.io/npm/v/dolma?style=for-the-badge"></a>
 </h1>
 This is a token transcoder that is used to encode and decode DogeHouse chat message token arrays.  This package is written for bot/bot library devlopers to be able to easily transcode dogehouse chat message tokens.  
 
 ## How to install
 To install this, simply go to your project and run the following command:
 ```cmd
-npm install kefler@latest --save
+npm install dolma@latest --save
 ```
 
 ## How to use
@@ -17,11 +17,11 @@ This will show you how to encode and decode tokens
 In this example, you will see multiple ways to encode your tokens.  The first one is in plain text.  You can pass any string into the encoder and it will convert it into an array of Message Tokens.
 
 ```ts
-import { kefler } from 'kefler';
+import { dolma } from 'dolma';
 
 const str = "I'm @HoloPanio, and I'd like to goto `Paris, France` one day :catJAM: Also, https://google.com is epic!";
 
-const tokens = kefler.encode(str);
+const tokens = dolma.encode(str);
 
 console.log(tokens);
 
@@ -51,11 +51,11 @@ Returns:
 In this example, you will see that you can have an mixed array with strings, and unitokens!  A unitoken is a token object where you define your object key as the token type, and the value as the value of the token, doing so would look like such: `{link: "https://google.com"}`, and this can be done for all token types.
 
 ```ts
-import { kefler } from 'kefler';
+import { dolma } from 'dolma';
 
 const arr = ["I'm", {mention: "HoloPanio"},", and I'd like to goto", {block: "Paris, France"},"one day", {emote: "catJAM"}, "Also",{link: 'https://google.com'}, "is epic!"];
 
-const tokens = kefler.encode(str);
+const tokens = dolma.encode(str);
 
 console.log(tokens);
 
@@ -88,7 +88,7 @@ You can also pass in message tokens like `{t: 'link', v: 'https://google.com'}`,
 When you get a payload from DogeHouse, you can use the decode method which will take the tokens, and turn it into a raw text string when you can use anywhere you please.  The decode method will always encode the data sent to it to ensure that the data is parsed correctly, so that means you can also pass in un-encoded data, such as the array in the previous example, and will print out a plain text string.  In this example, we will take the array from above, and return it to a plain text string using the decode method.
 
 ```ts
-import { kefler } from 'kefler';
+import { dolma } from 'dolma';
 
 const tokens = [
   { t: 'text', v: "I'm" },
@@ -109,7 +109,7 @@ const tokens = [
   { t: 'text', v: 'epic!' }
 ];
 
-const message = kefler.decode(tokens);
+const message = dolma.decode(tokens);
 
 console.log(message);
 
