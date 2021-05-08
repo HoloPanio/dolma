@@ -14,7 +14,7 @@ export type MessageTokenType =
 	| 'block'
 
 export interface MessageToken {
-	t: MessageTokenType;
+	t: MessageTokenType | string;
 	v: string;
 }
 

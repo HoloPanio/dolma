@@ -17,6 +17,17 @@ function decodeTokens(all) {
         if (tkn.t == 'link')
             return vals.push(tkn.v);
     });
-    return vals.join(' ');
+    var ret = [];
+    var len = vals.length;
+    vals.forEach(function (val, index) {
+        var strayValues = [",", "."];
+        if (strayValues.includes(val)) {
+            ret[ret.length - 1] += val;
+        }
+        else {
+            ret.push(val);
+        }
+    });
+    return ret.join(' ');
 }
 exports.decodeTokens = decodeTokens;

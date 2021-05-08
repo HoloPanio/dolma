@@ -1,6 +1,6 @@
 <h1 align=center>
 Kefler Token Transcoder<br>
-<img src="https://img.shields.io/npm/v/kefler?style=for-the-badge">
+<a src="https://www.npmjs.com/package/kefler"><img src="https://img.shields.io/npm/v/kefler?style=for-the-badge"></a>
 </h1>
 This is a token transcoder that is used to encode and decode DogeHouse chat message token arrays.  This package is written for bot/bot library devlopers to be able to easily transcode dogehouse chat message tokens.  
 

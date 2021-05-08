@@ -13,5 +13,16 @@ export function decodeTokens(all: Array<Unitoken | MessageToken | string> | stri
 		if (tkn.t == 'link') return vals.push(tkn.v);
 	});
 
-	return vals.join(' ');
+	let ret: string[] = [];
+	const len = vals.length
+	vals.forEach((val, index) => {
+		const strayValues = [",", "."]
+		if (strayValues.includes(val)) {
+			ret[ret.length-1] += val;
+		} else {
+			ret.push(val);
+		}
+	});
+
+	return ret.join(' ');
 }
