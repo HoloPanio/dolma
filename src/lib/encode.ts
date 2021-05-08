@@ -27,8 +27,3 @@ export function encodeTokens(message: Array<Unitoken | MessageToken | string> | 
 
 	return tokens;
 }
-
-const tkns = encodeTokens(["Hello gamers!",  {emote: 'pepowave'}, "I am glad to see @HoloPanio here, he likes to go `brrrrr`, but ya know, he likes to use", {t: 'link', v: 'https://google.com'}])
-
-console.log(tkns);
-console.log(decodeTokens("Ye Ye Bitch"));

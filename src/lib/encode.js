@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.encodeTokens = void 0;
-var decode_1 = require("./decode");
 var filterString_1 = require("./filterString");
 var filterUnitoken_1 = require("./filterUnitoken");
 function encodeTokens(message) {
@@ -28,6 +27,3 @@ function encodeTokens(message) {
     return tokens;
 }
 exports.encodeTokens = encodeTokens;
-var tkns = encodeTokens(["Hello gamers!", { emote: 'pepowave' }, "I am glad to see @HoloPanio here, he likes to go `brrrrr`, but ya know, he likes to use", { t: 'link', v: 'https://google.com' }]);
-console.log(tkns);
-console.log(decode_1.decodeTokens("Ye Ye Bitch"));
