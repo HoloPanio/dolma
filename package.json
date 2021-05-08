@@ -1,7 +1,7 @@
 {
   "name": "kefler",
   "description": "A token encoder and decoder for DogeHouse and associated projects",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/index.js",
   "scripts": {},
   "repository": {
