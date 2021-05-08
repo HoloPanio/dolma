@@ -1,0 +1,26 @@
+{
+  "name": "kefler",
+  "description": "A token encoder and decoder for DogeHouse and associated projects",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoloPanio/kefler.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HoloPanio/kefler/issues"
+  },
+  "homepage": "https://github.com/HoloPanio/kefler#readme",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/node": "^15.0.2",
+    "chalk": "^4.1.1"
+  }
+}

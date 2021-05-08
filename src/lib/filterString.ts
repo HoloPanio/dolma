@@ -16,5 +16,3 @@ export function filterString(message: string) {
 
 	return tokens;
 }
-
-console.log(filterString("Hello there gamers @HoloPanio @admin `code block 1` `code block 2` https://google.com http://yahoo.com :pepoSad: :pepoHappy:"))

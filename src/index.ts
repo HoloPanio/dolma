@@ -1,3 +1,4 @@
+import { decodeTokens } from "./lib/decode";
 import { encodeTokens } from "./lib/encode";
 
 export function kefler() {
@@ -5,3 +6,4 @@ export function kefler() {
 }
 
 kefler['encode'] = encodeTokens;
+kefler['decode'] = decodeTokens
