@@ -1,9 +1,11 @@
 {
   "name": "kefler",
   "description": "A token encoder and decoder for DogeHouse and associated projects",
-  "version": "1.0.1",
-  "main": "src/index.js",
-  "scripts": {},
+  "version": "1.0.2",
+  "main": "src/index",
+  "scripts": {
+    "clean": "tsc -b . --clean"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HoloPanio/kefler.git"
