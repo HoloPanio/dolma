@@ -7,6 +7,8 @@ interface RootMethodResponse {
 	decoded: string
 }
 
+export * from './util/types/token';
+
 export function kefler(values?: Array<Unitoken | MessageToken | string> | string): RootMethodResponse {
 	return {
 		encoded: encodeTokens(values ?? ""),

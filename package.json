@@ -1,10 +1,11 @@
 {
   "name": "kefler",
   "description": "A token encoder and decoder for DogeHouse and associated projects",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "src/index",
   "scripts": {
-    "clean": "tsc -b . --clean"
+    "clean": "tsc -b . --clean",
+    "publish": "tsc; npm publish; npm run clean;"
   },
   "repository": {
     "type": "git",
