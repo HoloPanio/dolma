@@ -23,4 +23,5 @@ export interface Unitoken {
 	link?: string,
 	emote?: string,
 	block?: string
+	text?: string
 }

@@ -1,7 +1,7 @@
 {
   "name": "kefler",
   "description": "A token encoder and decoder for DogeHouse and associated projects",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "main": "src/index",
   "scripts": {
     "clean": "tsc -b . --clean",
@@ -19,7 +19,7 @@
     "tokens"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/HoloPanio/kefler/issues"
   },
