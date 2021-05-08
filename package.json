@@ -1,7 +1,7 @@
 {
   "name": "kefler",
   "description": "A token encoder and decoder for DogeHouse and associated projects",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "src/index",
   "scripts": {
     "clean": "tsc -b . --clean",

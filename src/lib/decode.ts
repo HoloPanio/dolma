@@ -5,7 +5,7 @@ export function decodeTokens(all: Array<Unitoken | MessageToken | string> | stri
 	const tokens = encodeTokens(all);
 	let vals: string[] = [];
 
-	tokens.forEach(tkn => {
+	tokens.map(tkn => {
 		if (tkn.t == 'text') return vals.push(tkn.v);
 		if (tkn.t == 'block') return vals.push(`\`${tkn.v}\``);
 		if (tkn.t == 'emote') return vals.push(`:${tkn.v}:`);
