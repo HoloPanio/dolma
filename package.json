@@ -5,7 +5,7 @@
   "main": "src/index",
   "scripts": {
     "clean": "tsc -b . --clean",
-    "publish": "tsc; npm publish; npm run clean;"
+    "deploy": "tsc; npm publish; npm run clean;"
   },
   "repository": {
     "type": "git",
