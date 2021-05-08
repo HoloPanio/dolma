@@ -3,15 +3,18 @@
   "description": "A token encoder and decoder for DogeHouse and associated projects",
   "version": "1.0.0",
   "main": "src/index.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HoloPanio/kefler.git"
   },
-  "keywords": [],
+  "keywords": [
+    "kefler",
+    "dogehouse",
+    "doghouse.js",
+    "doghouse-tokens",
+    "tokens"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
