@@ -2,7 +2,7 @@ import { MessageToken, Unitoken } from "../util/types/token";
 
 type ArrayConstraints = Unitoken | MessageToken | Unitoken[] | MessageToken[];
 
-export function encodeTokens(message: Array<ArrayConstraints> | string, options: any): MessageToken[] {
+export function encodeTokens(message: Array<ArrayConstraints> | string): MessageToken[] {
 	const tokens: MessageToken[] = [];
 
 	if (typeof message == 'string') {
