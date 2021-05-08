@@ -25,6 +25,6 @@
   },
   "homepage": "https://github.com/HoloPanio/kefler#readme",
   "dependencies": {
-    "@types/node": "^15.0.2",
+    "@types/node": "^15.0.2"
   }
 }
