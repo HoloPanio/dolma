@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/HoloPanio/dolma/issues"
   },
-  "homepage": "https://github.com/HoloPanio/kefler#readme",
+  "homepage": "https://github.com/HoloPanio/dolma#readme",
   "dependencies": {
     "@types/node": "^15.0.2"
   }
