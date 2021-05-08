@@ -26,10 +26,96 @@ const tokens = kefler.encode(str);
 console.log(tokens);
 
 /**
- * Returns: 
- * 
- */
+Returns: 
+[
+  { t: 'text', v: "I'm" },
+  { t: 'mention', v: 'HoloPanio' },
+  { t: 'text', v: ',' },
+  { t: 'text', v: 'and' },
+  { t: 'text', v: "I'd" },
+  { t: 'text', v: 'like' },
+  { t: 'text', v: 'to' },
+  { t: 'text', v: 'goto' },
+  { t: 'block', v: 'Paris, France' },
+  { t: 'text', v: 'one' },
+  { t: 'text', v: 'day' },
+  { t: 'emote', v: 'catJAM' },
+  { t: 'text', v: 'Also,' },
+  { t: 'link', v: 'https://google.com' },
+  { t: 'text', v: 'is' },
+  { t: 'text', v: 'epic!' }
+]
+*/
+```
+
+In this example, you will see that you can have an mixed array with strings, and unitokens!  A unitoken is a token object where you define your object key as the token type, and the value as the value of the token, doing so would look like such: `{link: "https://google.com"}`, and this can be done for all token types.
+
+```ts
+import { kefler } from 'kefler';
+
+const arr = ["I'm", {mention: "HoloPanio"},", and I'd like to goto", {block: "Paris, France"},"one day", {emote: "catJAM"}, "Also",{link: 'https://google.com'}, "is epic!"];
+
+const tokens = kefler.encode(str);
+
+console.log(tokens);
+
+/**
+Returns: 
+[
+  { t: 'text', v: "I'm" },
+  { t: 'mention', v: 'HoloPanio' },
+  { t: 'text', v: ',' },
+  { t: 'text', v: 'and' },
+  { t: 'text', v: "I'd" },
+  { t: 'text', v: 'like' },
+  { t: 'text', v: 'to' },
+  { t: 'text', v: 'goto' },
+  { t: 'block', v: 'Paris, France' },
+  { t: 'text', v: 'one' },
+  { t: 'text', v: 'day' },
+  { t: 'emote', v: 'catJAM' },
+  { t: 'text', v: 'Also,' },
+  { t: 'link', v: 'https://google.com' },
+  { t: 'text', v: 'is' },
+  { t: 'text', v: 'epic!' }
+]
+*/
+```
+You can also pass in message tokens like `{t: 'link', v: 'https://google.com'}`, and it will work because the encoder checks for all possible methods that can be used.
 
 
+### Decoding Tokens
+When you get a payload from DogeHouse, you can use the decode method which will take the tokens, and turn it into a raw text string when you can use anywhere you please.  The decode method will always encode the data sent to it to ensure that the data is parsed correctly, so that means you can also pass in un-encoded data, such as the array in the previous example, and will print out a plain text string.  In this example, we will take the array from above, and return it to a plain text string using the decode method.
 
+```ts
+import { kefler } from 'kefler';
+
+const tokens = [
+  { t: 'text', v: "I'm" },
+  { t: 'mention', v: 'HoloPanio' },
+  { t: 'text', v: ',' },
+  { t: 'text', v: 'and' },
+  { t: 'text', v: "I'd" },
+  { t: 'text', v: 'like' },
+  { t: 'text', v: 'to' },
+  { t: 'text', v: 'goto' },
+  { t: 'block', v: 'Paris, France' },
+  { t: 'text', v: 'one' },
+  { t: 'text', v: 'day' },
+  { t: 'emote', v: 'catJAM' },
+  { t: 'text', v: 'Also,' },
+  { t: 'link', v: 'https://google.com' },
+  { t: 'text', v: 'is' },
+  { t: 'text', v: 'epic!' }
+];
+
+const message = kefler.decode(tokens);
+
+console.log(message);
+
+/**
+Returns: 
+
+I'm @HoloPanio , and I'd like to goto `Paris, France` one day :catJAM: Also, https://google.com is epic!
+*/
 ```
